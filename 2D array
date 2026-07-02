@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class ArrayInput {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int rows = scan.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int cols = scan.nextInt();
+        int[][] array = new int[rows][cols];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                array[i][j] = scan.nextInt();
+            }
+        }
+        System.out.println("The elements are:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.print("Enter row and column to update: ");
+        int row = scan.nextInt();
+        int col = scan.nextInt();
+
+        System.out.print("Enter new value: ");
+        array[row][col] = scan.nextInt();
+        System.out.print("Enter row and column to delete: ");
+        row = scan.nextInt();
+        col = scan.nextInt();
+
+         array[row][col] = 0;
+        System.out.println("Final Array:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        scan.close();
+    }
+}
