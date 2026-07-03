@@ -1,0 +1,7 @@
+public class main{
+    public static void main(String args[]){
+        String s1 = "Harish shankar";
+        String s2 = "Harish shankar";
+        System.out.println(s1.equals(s2));;
+    }
+}
