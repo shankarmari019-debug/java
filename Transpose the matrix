@@ -1,0 +1,26 @@
+public class TransposeTwoMatrices {
+    public static void main(String[] args) {
+        int[][] i = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+        int[][] j = {
+            {7, 8, 9},
+            {10, 11, 12}
+        };
+        System.out.println("Transpose of Matrix i:");
+        for (int row = 0; row < i[0].length; row++) {
+            for (int col = 0; col < i.length; col++) {
+                System.out.print(i[col][row] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("\nTranspose of Matrix j:");
+        for (int row = 0; row < j[0].length; row++) {
+            for (int col = 0; col < j.length; col++) {
+                System.out.print(j[col][row] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
