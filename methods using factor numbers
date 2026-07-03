@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class FactorAndAddition {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public void findFactors(int num) {
+        System.out.println("Factors of " + num + " are:");
+        
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        FactorAndAddition obj = new FactorAndAddition();
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        int sum = obj.add(a, b);
+        System.out.println("Sum = " + sum);
+        System.out.print("Enter a number to find factors: ");
+        int num = sc.nextInt();
+        obj.findFactors(num);
+        sc.close();
+    }
+}
