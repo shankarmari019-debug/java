@@ -1,0 +1,7 @@
+public class main{
+    public static void main(String args[]){
+    char [] name = {'p','a','n','d','a'};
+    String s=String.copyValueOf(name);
+    System.out.println(s);
+    }
+}
