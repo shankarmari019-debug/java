@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+
+        int balance = 5000;   
+        int withdrawAmount = 4500; 
+
+        try {
+            if (withdrawAmount > balance) {
+                throw new ArithmeticException("Insufficient Balance");
+            }
+
+            balance = balance - withdrawAmount;
+            System.out.println("Withdrawal Successful.");
+            System.out.println("Remaining Balance: ₹" + balance);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Transaction Failed: " + e.getMessage());
+
+        } finally {
+            System.out.println("Thank you for using our Online Banking System.");
+        }
+        System.out.println("Program continues...");
+    }
+}
